@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -o verbose
+mypy splitwisecli/ test && \
+python -m unittest discover -s test/ -t .

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+pipenv run coverage run --source='splitwise-cli/' --branch -m unittest discover -s test/ -t . && \
+pipenv run coverage html

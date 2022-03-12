@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+click = "~=8.0"
+click-spinner = "~=0.1"
+splitwise = "~=2.3"
+
+[dev-packages]
+bpython = ">=0.22"
+setuptools = ">=60"
+
+[requires]
+python_version = "3.10"
