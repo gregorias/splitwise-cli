@@ -238,17 +238,17 @@ rsa = ["oauthlib[signedtoken] (>=3.0.0)"]
 
 [[package]]
 name = "splitwise"
-version = "2.5.0"
+version = "3.0.0"
 description = "Splitwise Python SDK"
 optional = false
 python-versions = "*"
 files = [
-    {file = "splitwise-2.5.0-py3-none-any.whl", hash = "sha256:bd87425e76c75a876de11adb5a150542573871ef62bdeb246cf729b6908431a4"},
-    {file = "splitwise-2.5.0.tar.gz", hash = "sha256:2f0b5cf0f8f4c41c6939f4ec8f2a86dbbe7a3bc326b5ea98ffd011989d71012b"},
+    {file = "splitwise-3.0.0-py3-none-any.whl", hash = "sha256:48049bc8c025224c7df6059b2d8def80c5cb1f9a210a5650d92a410b7706f6de"},
+    {file = "splitwise-3.0.0.tar.gz", hash = "sha256:aaa956d3f65b0d9e716333afa612656b20f50010f10d9b8313e692f25f8b6a14"},
 ]
 
 [package.dependencies]
-requests = ">=2.24.0,<3"
+requests = ">=2.31.0,<3"
 requests-oauthlib = ">=1.3.0,<2"
 
 [[package]]
@@ -297,4 +297,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.7"
-content-hash = "9deab221d23ddba3adad009f6304c4a9423c99c91c24deba36a4483f6674f6b8"
+content-hash = "cabc0b5687c9218b4708ff1929a5334468dca52a0762a899d2669415cd8c156c"
