@@ -1,8 +1,11 @@
 [project]
-requires-python = "~3.11"
+requires-python = "~3.13"
+name = "splitwise-cli"
+
+[tool.mypy]
+  python_executable = "python"
 
 [tool.poetry]
-name = "splitwise-cli"
 version = "0.1"
 authors = ["Grzegorz Milka <grzegorzmilka@gmail.com>"]
 description = "A personal, partial CLI interface for Splitwise"
@@ -22,8 +25,7 @@ splitwise-cli = "splitwisecli.cli:main"
 Repository = "https://github.com/gregorias/splitwise-cli"
 
 [tool.poetry.dependencies]
-python = "^3.7"
-click = "^8.1"
+click = "^8.2"
 click-spinner = "~0.1"
 splitwise = "^3"
 
