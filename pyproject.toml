@@ -1,34 +1,43 @@
 [project]
-requires-python = "~3.13"
 name = "splitwise-cli"
-
-[tool.mypy]
-  python_executable = "python"
-
-[tool.poetry]
 version = "0.1"
-authors = ["Grzegorz Milka <grzegorzmilka@gmail.com>"]
 description = "A personal, partial CLI interface for Splitwise"
+authors = [{ name = "Grzegorz Milka", email = "grzegorzmilka@gmail.com" }]
+requires-python = ">=3.13"
+readme = "README.md"
+license = { "text" = "AGPL-3.0" }
 classifiers = [
   "Programming Language :: Python :: 3",
   "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
   "Operating System :: OS Independent",
 ]
-license = "AGPLv3"
-readme = "README.md"
-packages = [{ include = "splitwisecli" }]
+dependencies = [
+  "click>=8.2",
+  "click-spinner~=0.1",
+  "splitwise>=3",
+]
 
-[tool.poetry.scripts]
-splitwise-cli = "splitwisecli.cli:main"
-
-[tool.poetry.urls]
+[project.urls]
 Repository = "https://github.com/gregorias/splitwise-cli"
 
-[tool.poetry.dependencies]
-click = "^8.2"
-click-spinner = "~0.1"
-splitwise = "^3"
+[project.scripts]
+splitwise-cli = "splitwisecli.cli:main"
+
+[dependency-groups]
+dev = [
+  "coverage",
+  "mypy",
+]
+
+[tool.mypy]
+python_executable = "python"
+
+[tool.hatch.build.targets.sdist]
+include = ["splitwisecli"]
+
+[tool.hatch.build.targets.wheel]
+include = ["splitwisecli"]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
